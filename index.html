@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>疯狂殴打犬神112模拟器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 初始弹窗 -->
+    <div id="welcome-modal" class="modal">
+        <div class="modal-content">
+            <h1>来者何人！</h1>
+            <p>我有预感你应该是某位想揍揍我的朋友，在这里输入你的名字方便我去找你算账（开玩笑）</p>
+            <p id="impersonation-warning" style="display: none; color: red;">是谁想伪装成我的样子来揍我自己？！</p>
+            <input type="text" id="username" placeholder="请输入你的昵称" required>
+            <button id="enter-btn">确定</button>
+        </div>
+    </div>
+
+    <!-- 主游戏区域 -->
+    <div id="game-container">
+        <!-- 左上角幽灵模式提示 -->
+        <div id="ghost-mode" style="display: none;">
+            <p>你进入了用于测试的幽灵模式，所有的数据不计入其中，这件事只有犬神112本人知道。如果你不是犬神112本人，那就只能说明一件事：我的账号被黑入了！告诉我的女朋友我爱她！</p>
+        </div>
+
+        <!-- 右上角统计信息 -->
+        <div id="stats">
+            <div>总揍击次数: <span id="total-hits">0</span></div>
+            <div>总投喂次数: <span id="total-feeds">0</span></div>
+        </div>
+
+        <!-- 游戏区域 -->
+        <div id="game-area" onclick="handleClick(event)">
+            <div id="dog-container">
+                <img id="dog" src="MEITU_20260310_213738776.jpg" alt="犬神112">
+            </div>
+        </div>
+
+        <!-- 右下角排行榜 -->
+        <div id="leaderboard">
+            <div>把犬神112揍得最狠的人: <span id="hit-leader">暂无</span></div>
+            <div id="hit-comment"></div>
+            <div>善待犬神112的好人: <span id="feed-leader">暂无</span></div>
+            <div id="feed-comment"></div>
+        </div>
+    </div>
+
+    <!-- 音效元素 -->
+    <audio id="hit-sound" preload="auto">
+        <source src="https://www.soundjay.com/button/sounds/button-09.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
