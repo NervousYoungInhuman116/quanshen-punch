@@ -3,6 +3,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* 禁用蓝色选中框 */
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* 禁用按钮和链接的默认行为 */
+button, a {
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 body {
@@ -82,27 +93,27 @@ body {
 /* 幽灵模式提示 */
 #ghost-mode {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 10px;
+    left: 10px;
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    font-size: 1.1em;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    font-size: 0.9em;
     z-index: 100;
-    max-width: 400px;
+    max-width: 300px;
 }
 
 /* 统计信息 */
 #stats {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    font-size: 1em;
     z-index: 100;
 }
 
@@ -210,5 +221,42 @@ body {
     #dog-container {
         width: 100px;
         height: 100px;
+    }
+    
+    /* 移动端调整 */
+    #ghost-mode {
+        font-size: 0.8em;
+        padding: 8px;
+        max-width: 250px;
+    }
+    
+    #stats {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+    
+    #leaderboard {
+        font-size: 0.9em;
+        padding: 8px;
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .modal-content h1 {
+        font-size: 2em;
+    }
+    
+    .modal-content p {
+        font-size: 1em;
+    }
+    
+    .modal-content input {
+        padding: 10px;
+        font-size: 1em;
+    }
+    
+    .modal-content button {
+        padding: 10px 20px;
+        font-size: 1em;
     }
 }
